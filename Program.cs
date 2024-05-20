@@ -6,8 +6,7 @@
         {
             List<Anställd> anställda = new List<Anställd>();
             bool running = true;
-            int anstNr = 0000;
-            anställda.Add(new Anställd("test", "ettan", anstNr, 12345));
+            int anstNr = 0;
 
             while (running)
             {
