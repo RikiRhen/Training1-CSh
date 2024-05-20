@@ -4,7 +4,9 @@
  *  sedan använda detta som ett attribut för anställdas adress men hade inte hunnit med det.
  *  
  *  Uppgift 2: Klassen "Anställd" borde rimligtvis ha med sig förnamn och efternamn som minst. Jag personligen la till ett anställningsnummer och bakgrunden önskade även att lön läggs till.
- *  Så totalt 4 attribut: Förnamn, Efternamn, Anställningsnummer och Lön.
+ *  Så totalt 4 attribut: Förnamn, Efternamn, Anställningsnummer och Lön. Getters och setters till dessa men i dagsläget behövs de inte riktigt. Bra att ha för framtiden dock om t.ex. någon
+ *  får en löneförhöjning eller ändrar namn.
+ *  Klassen bör ju även ha en toString() metod inbyggt så att formateringen alltid blir korrekt när objekt av klassen ska printas ut.
  
 */
 namespace Övning_1_C_
