@@ -76,10 +76,10 @@
 
     public class Anställd
     {
-        public string fNamn { get; set; }
-        public string eNamn { get; set; }
-        public int anstNr { get; set; }
-        public int lön { get; set; }
+        private string fNamn { get; set; }
+        private string eNamn { get; set; }
+        private int anstNr { get; set; }
+        private int lön { get; set; }
 
 
         public Anställd(string fNamn, string eNamn, int anstNr, int lön)
