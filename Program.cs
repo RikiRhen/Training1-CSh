@@ -20,11 +20,28 @@
                 switch (val)
                 {
                     case "1":
-                        Console.Write("Förnamn?: ");
-                        string fNamn = Console.ReadLine();
+                        string fNamn;
+                        do
+                        {
+                            Console.Write("Förnamn?: ");
+                            fNamn = Console.ReadLine();
+                            if (string.IsNullOrEmpty(fNamn))
+                            {
+                                Console.WriteLine("Förnamnet kan inte lämnas tomt. Försök igen!");
+                            }
+                        } while (string.IsNullOrWhiteSpace(fNamn));
 
-                        Console.Write("Efternamn?: ");
-                        string eNamn = Console.ReadLine();
+
+                        string eNamn;
+                        do
+                        {
+                            Console.Write("Efternamn?: ");
+                            eNamn = Console.ReadLine();
+                            if (string.IsNullOrEmpty(eNamn))
+                            {
+                                Console.WriteLine("Efternamnet kan inte lämnas tomt. Försök igen!");
+                            }
+                        } while (string.IsNullOrWhiteSpace(eNamn));
 
                         Console.Write("Lön?: ");
                         int lön;
