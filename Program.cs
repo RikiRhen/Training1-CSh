@@ -1,4 +1,13 @@
-﻿namespace Övning_1_C_
+﻿/*
+ * Uppgift 1: Vilka klasser bör ingå i programmet?
+ *  En klass som hanterar anställda vore ju minimum. Jag hade gärna haft ett interface eller dylikt för Adress, som tar med adressen, postnummer, postort, stad etc och
+ *  sedan använda detta som ett attribut för anställdas adress men hade inte hunnit med det.
+ *  
+ *  Uppgift 2: Klassen "Anställd" borde rimligtvis ha med sig förnamn och efternamn som minst. Jag personligen la till ett anställningsnummer och bakgrunden önskade även att lön läggs till.
+ *  Så totalt 4 attribut: Förnamn, Efternamn, Anställningsnummer och Lön.
+ 
+*/
+namespace Övning_1_C_
 {
     internal class Program
     {
@@ -65,7 +74,7 @@
                         break;
 
                     default:
-                        Console.WriteLine("Ogiltigt val. Vänligen försök igen!\n");
+                        Console.WriteLine("Ogiltigt val. Vänligen försök igen! \n");
                         break;
 
                 }
