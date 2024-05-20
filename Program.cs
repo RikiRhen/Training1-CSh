@@ -104,7 +104,7 @@ namespace Övning_1_C_
 
         public void toString()
         {
-            Console.WriteLine ($"{fNamn} {eNamn}, Anställningsnummer: {anstNr}, Lön {lön}");
+            Console.WriteLine ($"{fNamn} {eNamn}, Anställningsnummer: {anstNr}, Lön: {lön}");
         }
 
     }
