@@ -15,13 +15,13 @@ namespace Övning_1_C_
     {
         static void Main(string[] args)
         {
-            List<Anställd> anställda = new List<Anställd>();
+            List<Employee> employees = new List<Employee>();
             bool running = true;
-            int anstNr = 0;
+            int identification = 0;
 
             while (running)
             {
-                Console.WriteLine("Välj ett alternativ:");
+                Console.WriteLine("Välj ett alternativ> ");
                 Console.WriteLine("1. Lägg till en ny anställd");
                 Console.WriteLine("2. Visa samtliga anställda");
                 Console.WriteLine("3. Avsluta");
@@ -30,44 +30,44 @@ namespace Övning_1_C_
                 switch (val)
                 {
                     case "1":
-                        string fNamn;
+                        string firstName;
                         do
                         {
-                            Console.Write("Förnamn?: ");
-                            fNamn = Console.ReadLine();
-                            if (string.IsNullOrEmpty(fNamn))
+                            Console.Write("Förnamn?> ");
+                            firstName = Console.ReadLine();
+                            if (string.IsNullOrEmpty(firstName))
                             {
                                 Console.WriteLine("Förnamnet kan inte lämnas tomt. Försök igen!");
                             }
-                        } while (string.IsNullOrWhiteSpace(fNamn));
+                        } while (string.IsNullOrWhiteSpace(firstName));
 
 
-                        string eNamn;
+                        string familyName;
                         do
                         {
-                            Console.Write("Efternamn?: ");
-                            eNamn = Console.ReadLine();
-                            if (string.IsNullOrEmpty(eNamn))
+                            Console.Write("Efternamn?> ");
+                            familyName = Console.ReadLine();
+                            if (string.IsNullOrEmpty(familyName))
                             {
                                 Console.WriteLine("Efternamnet kan inte lämnas tomt. Försök igen!");
                             }
-                        } while (string.IsNullOrWhiteSpace(eNamn));
+                        } while (string.IsNullOrWhiteSpace(familyName));
 
-                        Console.Write("Lön?: ");
-                        int lön;
-                        while (!int.TryParse(Console.ReadLine(), out lön))
+                        Console.Write("Lön?> ");
+                        int salary;
+                        while (!int.TryParse(Console.ReadLine(), out salary))
                         {
                             Console.Write("Ogiltig lön, vänligen håll till heltal.");
                         }
-                        anstNr++;
+                        identification++;
 
-                        anställda.Add(new Anställd(fNamn, eNamn, anstNr, lön));
+                        employees.Add(new Employee(firstName, familyName, identification, salary));
                         break;
 
                     case "2":
-                        foreach (Anställd anställd in anställda)
+                        foreach (Employee employee in employees)
                         {
-                            anställd.toString();
+                            employee.toString();
                         }
                         break;
 
@@ -85,26 +85,26 @@ namespace Övning_1_C_
         }
     }
 
-    public class Anställd
+    class Employee
     {
-        private string fNamn { get; set; }
-        private string eNamn { get; set; }
-        private int anstNr { get; set; }
-        private int lön { get; set; }
+        private string firstName { get; set; }
+        private string familyName { get; set; }
+        private int identification { get; set; }
+        private int salary { get; set; }
 
 
-        public Anställd(string fNamn, string eNamn, int anstNr, int lön)
+        public Employee(string firstName, string familyName, int identification, int salary)
         {
-            this.fNamn = fNamn;
-            this.eNamn = eNamn;
-            this.anstNr = anstNr;
-            this.lön = lön;
+            this.firstName = firstName;
+            this.familyName = familyName;
+            this.identification = identification;
+            this.salary = salary;
 
         }
-
+        
         public void toString()
         {
-            Console.WriteLine ($"{fNamn} {eNamn}, Anställningsnummer: {anstNr}, Lön: {lön}");
+            Console.WriteLine ($"{firstName} {familyName}, Anställningsnummer: {identification}, Lön: {salary}");
         }
 
     }
